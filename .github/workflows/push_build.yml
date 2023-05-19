@@ -21,6 +21,8 @@ jobs:
         run: mvn -B package --file nginx-dist/pom.xml -Dcompile.os.name=${{ github.job }}
       - name: git clone
         run: |
-          git clone https://github.com/ATLENA/lat-engine.git /tmp
-          cp -rf nginx-dist/target/nginx/* /tmp/lat-engine/nginx/
-          cd /tmp/lat-engine && git add . && git commit -a -m "test" && git push
+          rm -rf /tmp/nginx-test
+          mkdir -p /tmp/nginx-test
+          git clone https://github.com/ATLENA/lat-engine.git /tmp/nignx-test
+          cp -rf nginx-dist/target/nginx/* /tmp/nignx-test/lat-engine/nginx/
+          cd /tmp/nignx-test/lat-engine && git add . && git commit -a -m "test" && git push
