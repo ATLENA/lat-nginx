@@ -29,5 +29,4 @@ jobs:
           git config --global user.email "seosej@gmail.com"
           git config --global user.name "Sejin Seo"
           git config --global url.https://${{ secrets.API_TOKEN_GITHUB }}@github.com
-        #echo "https://seosej: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@github.com" > ~/.git-credentials
           cd /tmp/nginx-test && git add . && git commit -a -m "test" && git push
