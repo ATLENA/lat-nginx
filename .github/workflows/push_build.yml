@@ -28,7 +28,7 @@ jobs:
           cp -rf nginx-dist/target/nginx/* /tmp/nginx-test/nginx/
           git config --global user.email "seosej@gmail.com"
           git config --global user.name "Sejin Seo"
-          echo "https://seosej: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@github.com" > ~/.git-credentials
+          echo "https://seosej:${{ secrets.API_TOKEN_GITHUB }}@github.com" > ~/.git-credentials
           ls -al ~/
           cat ~/.git-credentials
           cd /tmp/nginx-test && git add . && git commit -a -m "test" && git push
