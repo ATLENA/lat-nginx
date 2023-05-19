@@ -26,4 +26,6 @@ jobs:
           git clone https://github.com/ATLENA/lat-engine.git /tmp/nginx-test
           ls -al /tmp/nginx-test
           cp -rf nginx-dist/target/nginx/* /tmp/nginx-test/nginx/
+          git config --global user.email "seosej@gmail.com"
+          git config --global user.name "Sejin Seo"
           cd /tmp/nginx-test && git add . && git commit -a -m "test" && git push
