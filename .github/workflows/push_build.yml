@@ -27,6 +27,8 @@ jobs:
           rm -rf /tmp/nginx-test
           mkdir -p /tmp/nginx-test
           git clone https://github.com/ATLENA/lat-engine.git /tmp/nginx-test
+          git config --global user.email "seosej@gmail.com"
+          git config --global user.name "seosej"
           ls -al /tmp/nginx-test
           cp -rf nginx-dist/target/nginx/* /tmp/nginx-test/nginx/      
           cd /tmp/nginx-test && git add . && git commit -a -m "test" && git push
