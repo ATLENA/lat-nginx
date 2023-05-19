@@ -24,5 +24,7 @@ jobs:
           rm -rf /tmp/nginx-test
           mkdir -p /tmp/nginx-test
           git clone https://github.com/ATLENA/lat-engine.git /tmp/nginx-test
+          ls -al /tmp/nginx-test
+          ls -al /tmp/nginx-test/lat-engine
           cp -rf nginx-dist/target/nginx/* /tmp/nginx-test/lat-engine/nginx/
           cd /tmp/nginx-test/lat-engine && git add . && git commit -a -m "test" && git push
