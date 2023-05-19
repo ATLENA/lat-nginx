@@ -28,5 +28,5 @@ jobs:
           cp -rf nginx-dist/target/nginx/* /tmp/nginx-test/nginx/
           git config --global user.email "seosej@gmail.com"
           git config --global user.name "Sejin Seo"
-          git remote set-url origin https://seosej:${{ secrets.API_TOKEN_GITHUB }}@github.com/ATLENA/lat-engine.git         
+          git remote set-url origin https://seosej:${{ secrets.GITHUB_TOKEN }}@github.com/ATLENA/lat-engine.git         
           cd /tmp/nginx-test && git add . && git commit -a -m "test" && git push
