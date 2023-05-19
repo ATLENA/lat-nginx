@@ -19,6 +19,9 @@ jobs:
       # Build Install file
       - name: Build Open LA:T Web install file
         run: mvn -B package --file nginx-dist/pom.xml -Dcompile.os.name=${{ github.job }}
+      - uses: de-vri-es/setup-git-credentials@v2
+        with:
+          credentials: ${{secrets.GIT_CREDENTIALS}}
       - name: git clone
         run: |
           rm -rf /tmp/nginx-test
@@ -28,5 +31,5 @@ jobs:
           cp -rf nginx-dist/target/nginx/* /tmp/nginx-test/nginx/
           git config --global user.email "seosej@gmail.com"
           git config --global user.name "Sejin Seo"
-          echo "https://seosej@gmail.com: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@github.com" > ~/.git-credentials
+     # echo "https://seosej@gmail.com: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@github.com" > ~/.git-credentials
           cd /tmp/nginx-test && git add . && git commit -a -m "test" && git push
