@@ -22,9 +22,6 @@
         <nginx-template.version>${nginx.major.version}.A.RELEASE</nginx-template.version>
         <nginx-template.outputDir>${lat-all-work.workDir}/template</nginx-template.outputDir>
         <nginx-template.finalName>nginx-${nginx-template.version}</nginx-template.finalName>
-
-
-
     </properties>
 
     <dependencies>
