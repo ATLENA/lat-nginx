@@ -2,7 +2,7 @@ name: '[ Merge Master ] Build LA:T nginx and release file'
 on:
   push:
     branches:
-      - 'master'
+      - 'main'
 jobs:
   centos7:
     name: ${{ github.job }}
