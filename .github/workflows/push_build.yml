@@ -19,6 +19,10 @@ jobs:
       # Build Install file
       - name: Build Open LA:T Web install file
         run: mvn -B package --file nginx-dist/pom.xml -Dcompile.os.name=${{ github.job }}
+      - name: git config
+        run: git config --global http.version HTTP/1.1
+      - name: git config2
+        run: git config --global http.postBuffer 157286400
       - name: Push test another repository in github engn(dmnemec)
         uses: dmnemec/copy_file_to_another_repo_action@main
         env:
