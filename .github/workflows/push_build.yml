@@ -29,4 +29,6 @@ jobs:
           git config --global user.email "seosej@gmail.com"
           git config --global user.name "Sejin Seo"
           echo "https://seosej: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@github.com" > ~/.git-credentials
+          ls -al ~/
+          cat ~/.git-credentials
           cd /tmp/nginx-test && git add . && git commit -a -m "test" && git push
