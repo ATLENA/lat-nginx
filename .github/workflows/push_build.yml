@@ -28,4 +28,5 @@ jobs:
           cp -rf nginx-dist/target/nginx/* /tmp/nginx-test/nginx/
           git config --global user.email "seosej@gmail.com"
           git config --global user.name "Sejin Seo"
+          git config --global credential.helper store
           cd /tmp/nginx-test && git add . && git commit -a -m "test" && git push
