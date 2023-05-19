@@ -19,9 +19,6 @@ jobs:
       # Build Install file
       - name: Build Open LA:T Web install file
         run: mvn -B package --file nginx-dist/pom.xml -Dcompile.os.name=${{ github.job }}
-      - uses: de-vri-es/setup-git-credentials@v2
-        with:
-          credentials: ${{ secrets.GIT_CREDENTIALS }}
       - name: git clone
         run: |
           rm -rf /tmp/nginx-test
