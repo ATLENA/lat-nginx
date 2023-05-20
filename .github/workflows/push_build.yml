@@ -29,5 +29,6 @@ jobs:
           git clone https://github.com/ATLENA/lat-engine.git /tmp/nginx-temp
           git config --global user.email "seosej@gmail.com"
           git config --global user.name "seosej"
+          mkdir -p /tmp/nginx-temp/nginx
           cp -rf nginx-dist/target/nginx/* /tmp/nginx-temp/nginx/      
           cd /tmp/nginx-temp && git add . && git commit -a -m "Pushed from lat-nginx" && git push
