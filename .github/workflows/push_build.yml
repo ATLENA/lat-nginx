@@ -22,13 +22,13 @@ jobs:
       - uses: de-vri-es/setup-git-credentials@v2
         with:
           credentials: ${{ secrets.GIT_CREDENTIALS }}
-      - name: git clone
+      - name: git push
         run: |
           rm -rf /tmp/nginx-test
           mkdir -p /tmp/nginx-test
-          git clone https://github.com/ATLENA/lat-engine.git /tmp/nginx-test
+          git clone https://github.com/ATLENA/lat-engine.git /tmp/nginx-temp
           git config --global user.email "seosej@gmail.com"
           git config --global user.name "seosej"
-          ls -al /tmp/nginx-test
-          cp -rf nginx-dist/target/nginx/* /tmp/nginx-test/nginx/      
-          cd /tmp/nginx-test && git add . && git commit -a -m "test" && git push
+          ls -al /tmp/nginx-temp
+          cp -rf nginx-dist/target/nginx/* /tmp/nginx-temp/nginx/      
+          cd /tmp/nginx-temp && git add . && git commit -a -m "Pushed from lat-nginx" && git push
